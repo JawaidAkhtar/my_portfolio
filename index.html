@@ -220,6 +220,32 @@
             box-shadow: 0 20px 32px -12px rgba(0,0,0,0.5);
         }
 
+        /* video container modern styling */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 28px;
+            transition: all 0.4s ease;
+            background: #000;
+            box-shadow: 0 0 0 0px rgba(139,92,246,0);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 28px;
+        }
+
+        .glass-card:hover .video-wrapper {
+            box-shadow: 0 0 0 2px rgba(139,92,246,0.6), 0 20px 40px rgba(0,0,0,0.5);
+        }
+
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
@@ -440,6 +466,31 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== INTRO VIDEO SECTION (MODERN GLASS CARD) ========== -->
+    <section style="padding: 2rem 0 2rem 0;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">
+                <i class="fas fa-video"></i> Watch My Intro
+            </h2>
+            <div class="glass-card" style="padding: 1.2rem; max-width: 900px; margin: 0 auto;" data-aos="zoom-in">
+                <div class="video-wrapper">
+                    <!-- ⚠️ IMPORTANT: Replace YOUR_GOOGLE_DRIVE_FILE_ID_HERE with your actual Google Drive File ID -->
+                    <!-- Example: if your share link is https://drive.google.com/file/d/abc123xyz/view?usp=sharing, then FILE_ID = abc123xyz -->
+                    <iframe 
+                        src="https://drive.google.com/file/d/1Op6dVELd36JRkgeOKHufdr-SM4V01dAF/view?usp=sharing" 
+                        allow="autoplay; fullscreen" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="text-align: center; margin-top: 1.2rem; font-size: 0.95rem; color: #cbd5f0; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fas fa-play-circle" style="color:#a78bfa;"></i> 
+                    60-second intro: My DevOps journey, skills & vision
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ========== END INTRO VIDEO SECTION ========== -->
 
     <section id="skills">
         <div class="container">
